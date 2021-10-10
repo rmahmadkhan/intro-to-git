@@ -4,69 +4,97 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Intro to Git</title>
 </head>
 
-<body data-new-gr-c-s-loaded="14.1032.0" spellcheck="false" style="color: rgb(201, 209, 217); background-color: rgb(13, 17, 23);">
-    <h1 style="text-align: center;">Intro to Git</h1>
-    <p><br></p>
+<body>
+    <h1>Intro to Git</h1>
+    <br>
     <h2>What&rsquo;s a version control system?</h2>
-    <p style="text-align: justify;"><span style="font-size: 20px;">A version control system, or VCS, tracks the history of changes as people and teams collaborate on projects together. As the project evolves, teams can run tests, fix bugs, and contribute new code with the confidence that any version can be recovered at any time. Developers can review project history to find out:</span></p>
+    <p>A version control system, or VCS, tracks the history of changes as people and teams collaborate on projects
+        together. As the project evolves, teams can run tests, fix bugs, and contribute new code with the confidence
+        that any version can be recovered at any time. Developers can review project history to find out:</p>
     <ul>
-        <li style="text-align: justify;"><span style="font-size: 20px;">Which changes were made?</span></li>
-        <li style="text-align: justify;"><span style="font-size: 20px;">Who made the changes?</span></li>
-        <li style="text-align: justify;"><span style="font-size: 20px;">When were the changes made?</span></li>
-        <li style="text-align: justify;"><span style="font-size: 20px;">Why were changes needed?</span></li>
+        <li>Which changes were made?</li>
+        <li>Who made the changes?</li>
+        <li>When were the changes made?</li>
+        <li>Why were changes needed?</li>
     </ul>
-    <p><br></p>
-    <h2><span style="font-size: 24px;">What&rsquo;s a distributed version control system?</span></h2>
-    <p style="text-align: justify;"><span style="font-size: 20px;">Git is an example of a distributed version control system (DVCS) commonly used for open source and commercial software development. DVCSs allow full access to every file, branch, and iteration of a project, and allows every user access to a full and self-contained history of all changes.</span></p>
-    <p style="text-align: justify;"><span style="font-size: 20px;">Without version control, team members are subject to redundant tasks, slower timelines, and multiple copies of a single project. To eliminate unnecessary work, Git and other VCSs give each contributor a unified and consistent view of a project, surfacing work that&rsquo;s already in progress. Seeing a transparent history of changes, who made them, and how they contribute to the development of a project helps team members stay aligned while working independently.</span></p>
-    <p><br></p>
+    <br>
+    <h2>What&rsquo;s a distributed version control system?</h2>
+    <p>Git is an example of a distributed version control
+            system (DVCS) commonly used for open source and commercial software development. DVCSs allow full access to
+            every file, branch, and iteration of a project, and allows every user access to a full and self-contained
+            history of all changes.</p>
+    <p>Without version control, team members are subject to
+            redundant tasks, slower timelines, and multiple copies of a single project. To eliminate unnecessary work,
+            Git and other VCSs give each contributor a unified and consistent view of a project, surfacing work
+            that&rsquo;s already in progress. Seeing a transparent history of changes, who made them, and how they
+            contribute to the development of a project helps team members stay aligned while working
+            independently.</p>
+    <br>
     <h2>Why Git?</h2>
-    <p style="text-align: justify;"><span style="font-size: 20px;">According to the latest&nbsp;</span><a href="https://insights.stackoverflow.com/survey/2017#technology"><span style="font-size: 20px; color: rgb(84, 172, 210);"><u>Stack Overflow developer survey</u></span></a><span style="font-size: 20px;">, more than 70 percent of developers use Git, making it the most-used VCS in the world. Git is commonly used for both open source and commercial software development, with significant benefits for individuals, teams and businesses.</span></p>
-    <p><br></p>
-    <h2><span style="font-size: 24px;">What&rsquo;s a repository?</span></h2>
-    <p style="text-align: justify;"><span style="font-size: 20px;">A repository, or Git project, encompasses the entire collection of files and folders associated with a project, along with each file&rsquo;s revision history. The file history appears as snapshots in time called commits, and the commits exist as a linked-list relationship, and can be organized into multiple lines of development called branches. Because Git is a DVCS, repositories are self-contained units and anyone who owns a copy of the repository can access the entire codebase and its history. Using the command line or other ease-of-use interfaces, a git repository also allows for: interaction with the history, cloning, creating branches, committing, merging, comparing changes across versions of code, and more.</span></p>
-    <p style="text-align: justify;"><br></p>
-    <h2 style="text-align: justify;"><span style="font-size: 24px;">Basic Git commands</span></h2>
-    <p><span style="font-size: 20px;">To use Git, developers use specific commands to copy, create, change, and combine code. These commands can be executed directly from the command line or by using an application like<span style="color: rgb(84, 172, 210);">&nbsp;</span></span><span style="color: rgb(84, 172, 210);"><u><a href="https://desktop.github.com/"></a></u><a href="https://desktop.github.com/"></a></span><a href="https://desktop.github.com/"><span style="font-size: 20px;"><span style="color: rgb(84, 172, 210);"><u>GitHub Desktop</u></span></span></a><span style="color: rgb(84, 172, 210);"><a href="https://desktop.github.com/"></a><u><a href="https://desktop.github.com/"></a></u></span><span style="font-size: 20px;"><span style="color: rgb(84, 172, 210);">&nbsp;</span>or Git Kraken. Here are some common commands for using Git:</span></p>
+    <p>According to the latest&nbsp;<a
+            href="https://insights.stackoverflow.com/survey/2017#technology"><u>Stack Overflow developer
+                    survey</u></a>, more than 70 percent of developers use Git,
+            making it the most-used VCS in the world. Git is commonly used for both open source and commercial software
+            development, with significant benefits for individuals, teams and businesses.</p>
+    <br>
+    <h2>What&rsquo;s a repository?</h2>
+    <p>A repository, or Git project, encompasses the entire
+            collection of files and folders associated with a project, along with each file&rsquo;s revision history.
+            The file history appears as snapshots in time called commits, and the commits exist as a linked-list
+            relationship, and can be organized into multiple lines of development called branches. Because Git is a
+            DVCS, repositories are self-contained units and anyone who owns a copy of the repository can access the
+            entire codebase and its history. Using the command line or other ease-of-use interfaces, a git repository
+            also allows for: interaction with the history, cloning, creating branches, committing, merging, comparing
+            changes across versions of code, and more.</p>
+    <br>
+    <h2>Basic Git commands</h2>
+    <p>To use Git, developers use specific commands to copy, create, change, and combine
+            code. These commands can be executed directly from the command line or by using an application like <a
+            href="https://desktop.github.com"><u>GitHub Desktop</u></a> or Git Kraken. Here are some common commands for using
+            Git:</p>
     <ul>
-        <li><span style="font-size: 20px;"><code>git init</code> initializes a brand new Git repository and begins tracking an existing directory. It adds a hidden subfolder within the existing directory that houses the internal data structure required for version control.</span></li>
+        <li><code>git init</code> initializes a brand new Git repository and begins
+                tracking an existing directory. It adds a hidden subfolder within the existing directory that houses the
+                internal data structure required for version control.</li>
+
+        <li><code>git clone</code> creates a local copy of
+                    a project that already exists remotely. The clone includes all the project&rsquo;s files, history,
+                    and branches.</li>
+
+        <li><code>git add</code> stages a change. Git tracks changes to a
+                developer&rsquo;s codebase, but it&rsquo;s necessary to stage and take a snapshot of the changes to
+                include them in the project&rsquo;s history. This command performs staging, the first part of that
+                two-step process. Any changes that are staged will become a part of the next snapshot and a part of the
+                project&rsquo;s history. Staging and committing separately gives developers complete control over the
+                history of their project without changing how they code and work.</li>
+
+        <li><code>git commit</code> saves the snapshot to the project history and
+                completes the change-tracking process. In short, a commit functions like taking a photo. Anything
+                that&rsquo;s been staged with git add will become a part of the snapshot with git commit.</li>
+
+        <li><code>git status</code> shows the status of changes as untracked, modified,
+                or staged.</li>
+
+        <li><code>git branch</code> shows the branches being worked on locally.
+        </li>
+
+        <li><code>git merge</code> merges lines of development together. This command is
+                typically used to combine changes made on two distinct branches. For example, a developer would merge
+                when they want to combine changes from a feature branch into the main branch for deployment.</li>
+
+        <li><code>git pull</code> updates the local line of development with updates from
+                its remote counterpart. Developers use this command if a teammate has made commits to a branch on a
+                remote, and they would like to reflect those changes in their local environment.</li>
+
+        <li><code>git push</code> updates the remote repository with any commits made
+                locally to a branch.</li>
     </ul>
-    <p><br></p>
-    <ul>
-        <li><span style="font-size: 20px;"><span style="font-size: 20px;"><code>git clone</code> creates a local copy of a project that already exists remotely. The clone includes all the project&rsquo;s files, history, and branches.</span></span></li>
-    </ul>
-    <p><br></p>
-    <ul>
-        <li><span style="font-size: 20px;"><code>git add</code> stages a change. Git tracks changes to a developer&rsquo;s codebase, but it&rsquo;s necessary to stage and take a snapshot of the changes to include them in the project&rsquo;s history. This command performs staging, the first part of that two-step process. Any changes that are staged will become a part of the next snapshot and a part of the project&rsquo;s history. Staging and committing separately gives developers complete control over the history of their project without changing how they code and work.</span></li>
-    </ul>
-    <p><br></p>
-    <ul>
-        <li><span style="font-size: 20px;"><code>git commit</code> saves the snapshot to the project history and completes the change-tracking process. In short, a commit functions like taking a photo. Anything that&rsquo;s been staged with git add will become a part of the snapshot with git commit.</span></li>
-    </ul>
-    <p><br></p>
-    <ul>
-        <li><span style="font-size: 20px;"><code>git status</code> shows the status of changes as untracked, modified, or staged.</span></li>
-    </ul>
-    <p><br></p>
-    <ul>
-        <li><span style="font-size: 20px;"><code>git branch</code> shows the branches being worked on locally.</span></li>
-    </ul>
-    <p><br></p>
-    <ul>
-        <li><span style="font-size: 20px;"><code>git merge</code> merges lines of development together. This command is typically used to combine changes made on two distinct branches. For example, a developer would merge when they want to combine changes from a feature branch into the main branch for deployment.</span></li>
-    </ul>
-    <p><br></p>
-    <ul>
-        <li><span style="font-size: 20px;"><code>git pull</code> updates the local line of development with updates from its remote counterpart. Developers use this command if a teammate has made commits to a branch on a remote, and they would like to reflect those changes in their local environment.</span></li>
-    </ul>
-    <p><br></p>
-    <ul>
-        <li><span style="font-size: 20px;"><code>git push</code> updates the remote repository with any commits made locally to a branch.</span></li>
-    </ul>
-    <p><span style="font-size: 20px;">Learn more from </span><u><a href="https://git-scm.com/docs"></a></u><a href="https://git-scm.com/docs"></a><a href="https://git-scm.com/docs"><span style="font-size: 20px; color: rgb(84, 172, 210);"><u>a full reference guide to Git commands</u></span></a><a href="https://git-scm.com/docs"></a><u><a href="https://git-scm.com/docs"></a></u><span style="font-size: 20px;">.</span></p>
+    <p>Learn more from <a href="https://git-scm.com/docs"><u>a full reference guide to Git
+                    commands</u>.</p>
 </body>
 
 </html>
