@@ -156,13 +156,57 @@
         <code>$ git clone https://github.com/USERNAME/REPOSITORY</code>
         <li>Press Enter to create your local clone</li>
         <div class="codeBox">
-        <p>$ git clone https://github.com/USERNAME/REPOSITORY</p>
-        <p>> Cloning into `hello-world`...</p>
-        <p>> remote: Counting objects: 10, done.</p>
-        <p>> remote: Compressing objects: 100% (8/8), done.</p>
-        <p>> remove: Total 10 (delta 1), reused 10 (delta 1)</p>
-        <p>> Unpacking objects: 100% (10/10), done.</p>
+            <p>$ git clone https://github.com/USERNAME/REPOSITORY</p>
+            <p>> Cloning into `hello-world`...</p>
+            <p>> remote: Counting objects: 10, done.</p>
+            <p>> remote: Compressing objects: 100% (8/8), done.</p>
+            <p>> remove: Total 10 (delta 1), reused 10 (delta 1)</p>
+            <p>> Unpacking objects: 100% (10/10), done.</p>
         </div>
+    </ol>
+    <br>
+    <h2>Step 3. Create a Branch</h2>
+    <p>Branching is the way to work on different versions of a repository at one time.</p>
+    <p>By default your repository has one branch named <code>main</code> which is considered to be the definitive
+        branch. We use
+        branches to experiment and make edits before committing them to <code>main</code>.</p>
+    <p>When you create a branch off the <code>main</code> branch, you’re making a copy, or snapshot, of
+        <code>main</code> as it was at that point
+        in time. If someone else made changes to the <code>main</code> branch while you were working on your branch, you
+        could pull
+        in those updates.
+    </p>
+    <p>Following diagram shows:</p>
+    <ul>
+        <li>The <code>main</code> branch</li>
+        <li>A new branch called <code>feature</code> (because we’re doing ‘feature work’ on this branch)</li>
+        <li>The journey that <code>feature</code> takes before it’s merged into <code>main</code></li>
+        <img src="assets/images/branching.png" alt="Branching" width="800">
+    </ul>
+    <p>Have you ever saved different versions of a file? Something like:</p>
+    <ul>
+        <li>story.txt</li>
+        <li>story-joe-edit.txt</li>
+        <li>story-joe-edit-reviewed.txt</li>
+    </ul>
+    <p>Branches accomplish similar goals in GitHub repositories.</p>
+    <br>
+    <h3>To create a new branch</h3>
+    <ol>
+        <li>Open command line & make sure you are in the main directory of your local repository</li>
+        <li>Write <code>git branch BRANCH-NAME</code></li>
+        <p>This will create a new branch. But before you start making changes to your code, you will have to first
+            switch to the new branch you just created.</p>
+        <li>To do that, run <code>git checkout BRANCH-NAME</code></li>
+        <p>Many developers, especially when they’re just getting started, forget switching to the new branch. That’s
+            why you can use this command that will create the new branch and immediately switch you to it:</p>
+        <code>git checkout -b BRANCH-NAME</code>
+        <p>Once you’ve created a new branch and switched to it, you can start making changes in your code. However, all
+            of these changes (including the new branch) is still only in your local machine.</p>
+        <li>To publish the new branch you created in GitHub and make the branch available for everyone in your team, run
+            the
+            following command:</li>
+        <code>git push -u https://github.com/USERNAME/REPOSITORY BRANCH-NAME></code>
     </ol>
 </body>
 
