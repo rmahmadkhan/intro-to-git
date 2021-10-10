@@ -36,3 +36,22 @@ li {
 a {
     color: rgb(84, 172, 210);
 }
+
+img{
+    background-color: rgba(201, 209, 217, 0.50);
+    padding: 10px 10px;
+}
+
+code{
+    background-color: rgb(38, 46, 56);
+    padding: 2px 7px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.codeBox{
+    background-color: rgb(38, 46, 56);
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+}

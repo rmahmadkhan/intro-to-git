@@ -95,7 +95,180 @@
             locally to a branch.</li>
     </ul>
     <p>Learn more from <a href="https://git-scm.com/docs"><u>a full reference guide to Git
-                commands</u>.</p>
+                commands</u></a>.</p>
+    <br>
+    <h1>Intro to GitHub</h1>
+    <br>
+    <h2>What is GitHub?</h2>
+    <p><a href="https://github.com/"><u>GitHub</u></a> is a code hosting platform for version control and collaboration.
+        It lets you
+        and others work together on projects from anywhere.</p>
+    <p>This guide teaches you GitHub essentials like
+        repositories, branches, commits, and Pull Requests. You&rsquo;ll create your own Hello World repository and
+        learn GitHub&rsquo;s Pull Request workflow, a popular way to create and review code.</p>
+    <br>
+    <h2>Prerequisites:</h2>
+    <p>To complete this tutorial, you need a <a href="http://github.com/"><u>GitHub
+                account</u></a> and Internet access. You don&rsquo;t need to know how to code. Installation
+        of Git (the version control software GitHub is built on) is necessary. Some knowledge about command line
+        will be a plus.</p>
+    <br>
+    <h2>Step 1. Create a Repository</h2>
+    <p>A repository is usually used to organize a single project. Repositories can contain folders and files, images,
+        videos, spreadsheets, and data sets – anything your project needs. I would recommend including a README, or a
+        file with information about your project. GitHub makes it easy to add one at the same time you create your new
+        repository. It also offers other common options such as a license file.</p>
+    <p>Your hello-world repository can be a
+        place where you store ideas, resources, or even share and discuss things
+        with others.</p>
+    <h3>To create a new repository</h3>
+    <ol>
+        <li>In the upper right corner, next to your avatar or identicon, click and then select New Repository</li>
+        <li>Name your repository hello-world</li>
+        <li>Write a short description</li>
+        <li>Select Add a README file</li>
+    </ol>
+    <img src="assets/images/create-repo.png" alt="Creating a new repository">
+    <p>Click Create repository.</p>
+    <br>
+    <h2>Step 2. Clone the repository</h2>
+    <p>When you create a repository on GitHub, it exists as a remote repository. You can clone your repository to create
+        a local copy on your computer and sync between the two locations.</p>
+    <h3>About cloning a repository</h3>
+    <p>You can clone a repository from GitHub to your local computer to make it easier to fix merge conflicts, add or
+        remove files, and push larger commits. When you clone a repository, you copy the repository from GitHub to your
+        local machine.</p>
+    <p>Cloning a repository pulls down a full copy of all the repository data that GitHub has at that point in time,
+        including all versions of every file and folder for the project. You can push your changes to the remote
+        repository on GitHub, or pull other people's changes from GitHub.</p>
+    <p>You can clone your existing repository or clone another person's existing repository to contribute to a project.
+    </p>
+    <br>
+    <h3>Cloning a repository</h3>
+    <ol>
+        <li>On GitHub, navigate to the main page of the repository</li>
+        <li>Above the list of files, click ⇩ Code</li>
+        <li>To clone the repository using HTTPS, under "Clone with HTTPS", click ◳</li>
+        <img src="assets/images/clone.png" alt="Cloning a repository">
+        <li>Open Git Bash or command line</li>
+        <li>Change the current working directory to the location where you want the cloned directory</li>
+        <li>Type <code>git clone</code>, and then paste the URL you copied earlier</li>
+        <code>$ git clone https://github.com/USERNAME/REPOSITORY</code>
+        <li>Press Enter to create your local clone</li>
+        <div class="codeBox">
+            <p>$ git clone https://github.com/USERNAME/REPOSITORY</p>
+            <p>> Cloning into `hello-world`...</p>
+            <p>> remote: Counting objects: 10, done.</p>
+            <p>> remote: Compressing objects: 100% (8/8), done.</p>
+            <p>> remove: Total 10 (delta 1), reused 10 (delta 1)</p>
+            <p>> Unpacking objects: 100% (10/10), done.</p>
+        </div>
+    </ol>
+    <br>
+    <h2>Step 3. Create a Branch</h2>
+    <p>Branching is the way to work on different versions of a repository at one time.</p>
+    <p>By default your repository has one branch named <code>main</code> which is considered to be the definitive
+        branch. We use
+        branches to experiment and make edits before committing them to <code>main</code>.</p>
+    <p>When you create a branch off the <code>main</code> branch, you’re making a copy, or snapshot, of
+        <code>main</code> as it was at that point
+        in time. If someone else made changes to the <code>main</code> branch while you were working on your branch, you
+        could pull
+        in those updates.
+    </p>
+    <p>Following diagram shows:</p>
+    <ul>
+        <li>The <code>main</code> branch</li>
+        <li>A new branch called <code>feature</code> (because we’re doing ‘feature work’ on this branch)</li>
+        <li>The journey that <code>feature</code> takes before it’s merged into <code>main</code></li>
+        <img src="assets/images/branching.png" alt="Branching" width="800">
+    </ul>
+    <p>Have you ever saved different versions of a file? Something like:</p>
+    <ul>
+        <li>story.txt</li>
+        <li>story-joe-edit.txt</li>
+        <li>story-joe-edit-reviewed.txt</li>
+    </ul>
+    <p>Branches accomplish similar goals in GitHub repositories.</p>
+    <br>
+    <h3>To create a new branch</h3>
+    <ol>
+        <li>Open command line & make sure you are in the main directory of your local repository</li>
+        <li>Write <code>git branch BRANCH-NAME</code></li>
+        <p>This will create a new branch. But before you start making changes to your code, you will have to first
+            switch to the new branch you just created.</p>
+        <li>To do that, run <code>git checkout BRANCH-NAME</code></li>
+        <p>Many developers, especially when they’re just getting started, forget switching to the new branch. That’s
+            why you can use this command that will create the new branch and immediately switch you to it:</p>
+        <code>git checkout -b BRANCH-NAME</code>
+        <p>Once you’ve created a new branch and switched to it, you can start making changes in your code. However, all
+            of these changes (including the new branch) is still only in your local machine.</p>
+        <li>To publish the new branch you created in GitHub and make the branch available for everyone in your team, run
+            the
+            following command:</li>
+        <code>git push -u https://github.com/USERNAME/REPOSITORY BRANCH-NAME></code>
+    </ol>
+    <h2>Step 4. Make and commit changes</h2>
+    <p>Bravo! Now, you’re on the code view for your new branch, which is a copy of <code>main</code>. Let’s make some
+        edits.
+    </p>
+    <p>On GitHub, saved changes are called commits. Each commit has an associated commit message, which is a description
+        explaining why a particular change was made. Commit messages capture the history of your changes, so other
+        contributors can understand what you’ve done and why.</p>
+    <h3>Making & committing changes</h3>
+    <ol>
+        <li>Create a new file in your local repository</li>
+        <li>Open the file in an editor</li>
+        <li>Make any changes you want to the file and save the file</li>
+        <li>Add all the new files to git by running <code>git add FILE-NAME</code> or <code>git add --all</code> to add
+            all the files</li>
+        <li>If you have reomved a file, remove it from git by running <code>git rm FILE-NAME</code></li>
+        <li>Commit your changes to git by running <code>git commit -m 'COMMIT-MESSAGE'</code></li>
+        <li>All these changes are in local repository. To push them to the remote, run</li>
+        <code>git push https://github.com/USERNAME/REPOSITORY BRANCH-NAME</code>
+    </ol>
+    <p>Woohoo!🥳 All your changes you made in your local repository are in the remote repository now.</p>
+    <br>
+    <h2>Step 5. Open a Pull Request</h2>
+    <p>Nice edits! Now that you have changes in a branch off of main, you can open a pull request.</p>
+    <p>Pull Requests are the heart of collaboration on GitHub. When you open a pull request, you’re proposing your
+        changes and requesting that someone review and pull in your contribution and merge them into their branch. Pull
+        requests show diffs, or differences, of the content from both branches. The changes, additions, and subtractions
+        are shown in green and red.</p>
+    <p>As soon as you make a commit, you can open a pull request and start a discussion, even before the code is
+        finished.</p>
+    <p>You can even open pull requests in your own repository and merge them yourself. It’s a great way to learn the
+        GitHub flow before working on larger projects.</p>
+    <h3>Creating a pull request</h3>
+    <ol>
+        <li>Before creating a pull request, it is suggested to pull the changes from the master(main) branch into your
+            branch and resolve
+            conflicts, if any. To do this, run <code>git pull</code> and then commit & push those changes as well.</li>
+        <li>Then, we need to make sure no changes are left to commit. By running
+            <code>git status</code> you will be getting output like this
+        </li>
+        <div class="codeBox">
+            <p>Output</p>
+            <p>On branch BRANCH-NAME</p>
+            <p>nothing to commit, working tree clean</p>
+        </div>
+        <p>As you have all changes commited to your branch and your branch is also pushed to remote repository. Let's
+            create the pull request.</p>
+        <li>Now, go the main page of your repository on GitHub and there you'll see option
+            <code>Compare & pull request</code>, click there.
+        </li>
+        <img src="assets/images/create-pull-request.png" alt="Create pull request" width="800">
+        <li>Add title and description to your pull request</li>
+        <img src="assets/images/pull-request-page.png" alt="Pull request page" width="800">
+        <li>Click on <code>pull request</code></li>
+        <li>Woohoo! Your first pull request is created. Now you can see the changes by going to Files Changed tab and
+            finally <code>Merge pull request</code></li>
+        <img src="assets/images/merge.png" alt="Merge pull request" width="800">
+        <li>Here, you can write extra description about your merge. Then, click <code>Confirm merge</code></li>
+        <img src="assets/images/confirm-merge.png" alt="Confirm merge pull request" width="800">
+        <li>Now, you'll see a message like below that your pull request is merged</li>
+        <img src="assets/images/merged.png" alt="Pull request merged" width="800">
+    </ol>
 </body>
 
 </html>
