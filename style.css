@@ -1,0 +1,38 @@
+@font-face {
+    font-family: SourceCodePro;
+    src: url('SourceCodePro-Regular.ttf');
+}
+
+body {
+    font-family: SourceCodePro;
+    color: rgb(201, 209, 217);
+    background-color: rgb(13, 17, 23);
+    margin: 0 80px;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 18px;
+    text-align: justify;
+}
+
+li {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+a {
+    color: rgb(84, 172, 210);
+}
