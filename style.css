@@ -1,5 +1,11 @@
-body{
-    color: rgb(201, 209, 217); 
+@font-face {
+    font-family: SourceCodePro;
+    src: url('SourceCodePro-Regular.ttf');
+}
+
+body {
+    font-family: SourceCodePro;
+    color: rgb(201, 209, 217);
     background-color: rgb(13, 17, 23);
 }
 
@@ -16,7 +22,7 @@ h3 {
     font-size: 20px;
 }
 
-p{
+p {
     font-size: 18px;
     text-align: justify;
 }
@@ -26,6 +32,6 @@ li {
     margin: 20px 0;
 }
 
-a{
+a {
     color: rgb(84, 172, 210);
 }
