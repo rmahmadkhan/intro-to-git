@@ -228,6 +228,47 @@
         <code>git push https://github.com/USERNAME/REPOSITORY BRANCH-NAME</code>
     </ol>
     <p>Woohoo!🥳 All your changes you made in your local repository are in the remote repository now.</p>
+    <br>
+    <h2>Step 5. Open a Pull Request</h2>
+    <p>Nice edits! Now that you have changes in a branch off of main, you can open a pull request.</p>
+    <p>Pull Requests are the heart of collaboration on GitHub. When you open a pull request, you’re proposing your
+        changes and requesting that someone review and pull in your contribution and merge them into their branch. Pull
+        requests show diffs, or differences, of the content from both branches. The changes, additions, and subtractions
+        are shown in green and red.</p>
+    <p>As soon as you make a commit, you can open a pull request and start a discussion, even before the code is
+        finished.</p>
+    <p>You can even open pull requests in your own repository and merge them yourself. It’s a great way to learn the
+        GitHub flow before working on larger projects.</p>
+    <h3>Creating a pull request</h3>
+    <ol>
+        <li>Before creating a pull request, it is suggested to pull the changes from the master(main) branch into your
+            branch and resolve
+            conflicts, if any. To do this, run <code>git pull</code> and then commit & push those changes as well.</li>
+        <li>Then, we need to make sure no changes are left to commit. By running
+            <code>git status</code> you will be getting output like this
+        </li>
+        <div class="codeBox">
+            <p>Output</p>
+            <p>On branch BRANCH-NAME</p>
+            <p>nothing to commit, working tree clean</p>
+        </div>
+        <p>As you have all changes commited to your branch and your branch is also pushed to remote repository. Let's
+            create the pull request.</p>
+        <li>Now, go the main page of your repository on GitHub and there you'll see option
+            <code>Compare & pull request</code>, click there.
+        </li>
+        <img src="assets/images/create-pull-request.png" alt="Create pull request" width="800">
+        <li>Add title and description to your pull request</li>
+        <img src="assets/images/pull-request-page.png" alt="Pull request page" width="800">
+        <li>Click on <code>pull request</code></li>
+        <li>Woohoo! Your first pull request is created. Now you can see the changes by going to Files Changed tab and
+            finally <code>Merge pull request</code></li>
+        <img src="assets/images/merge.png" alt="Merge pull request" width="800">
+        <li>Here, you can write extra description about your merge. Then, click <code>Confirm merge</code></li>
+        <img src="assets/images/confirm-merge.png" alt="Confirm merge pull request" width="800">
+        <li>Now, you'll see a message like below that your pull request is merged</li>
+        <img src="assets/images/merged.png" alt="Pull request merged" width="800">
+    </ol>
 </body>
 
 </html>
